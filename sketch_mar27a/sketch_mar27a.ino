@@ -60,7 +60,6 @@ void loop() {
 
   // Check if readings are valid
   if (isnan(temperature) || isnan(humidity)) {
-    Serial.println("Failed to read from DHT sensor! Fetching weather data...");
 
     // Fetch weather data from Open-Meteo API
     if (!fetchWeatherData(&temperature, &humidity)) {
